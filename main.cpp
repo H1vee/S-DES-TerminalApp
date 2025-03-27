@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-// Таблиці перестановок
+
 int IP[8] = {1, 5, 2, 0, 3, 7, 4, 6};
 int IP_1[8] = {3, 0, 2, 4, 6, 1, 7, 5};
 int EP[8] = {3, 0, 1, 2, 1, 2, 3, 0};
@@ -30,7 +30,7 @@ bitset<8> permute8(bitset<8> input, int* table) {
     return output;
 }
 
-// Генерація ключів
+
 void generateKeys(bitset<10> key, bitset<8>& K1, bitset<8>& K2) {
     key = permute10(key, P10);
     bitset<5> left = (key.to_ulong() >> 5) & 0b11111;
